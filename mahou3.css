@@ -63,15 +63,20 @@ body {
   background-size: 100% 100%;
   margin-top: 80px;
   margin-bottom: -50px;
+  z-index: 1;
 }
 
 .col-md-10 > p {
   font-size: 20px;
   font-family: 'BasicTitle';
 }
+
+.col-md-6 {
+  z-index: 2;
+}
  
 #top {
-  margin-top: 200px;
+  margin-top: 100px;
   padding-bottom: 50px;
 }
 
