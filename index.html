@@ -172,7 +172,7 @@ echo json_encode(array('status' => 'OK'));
         <br>
         <h2 class = "header"> <font color="#8A9BAB"> Latest Blog Post </font> </h2>
         <hr width="250px">
-        <p id = "blog-title"> placeholder </p>
+        <!--<p id = "blog-title"> placeholder </p>-->
         <script type="text/javascript"> 
           $.get("https://familiarworks.wordpress.com/feed/").done(function (data) {
             $(data).find("item").each(function () { // or "item" or whatever suits your feed
@@ -186,7 +186,7 @@ echo json_encode(array('status' => 'OK'));
             });
           });
         </script>
-        <script src="https://rss.bloople.net/?url=https%3A%2F%2Ffamiliarworks.wordpress.com%2Ffeed%2F&limit=2&showtitle=false&type=js"></script>
+        <script src="https://rss.bloople.net/?url=https%3A%2F%2Ffamiliarworks.wordpress.com%2Ffeed%2F&limit=1&showtitle=false&type=js"></script>
       </div>
       <div class="col-md-4">
         <h2 class = "header"> <font color="#8A9BAB"> Recent Tweets </font> </h2>
