@@ -27,6 +27,8 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script type="text/javascript" src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>
+
     <!-- Custom styles for this template -->
     <link href="main.css" rel="stylesheet">
   </head>
@@ -61,9 +63,8 @@
                   </ul>
                 </li>
                 <li><a href="./about.html"> <font color="#F1DFED"> About</font></a></li>
-                <li><a href="#about"> <font color="#F1DFED"> Blog</font></a></li>
+                <li><a href="https://familiarworks.wordpress.com/"> <font color="#F1DFED"> Blog</font></a></li>
                 <li><a href="#contact"> <font color="#F1DFED"> Contact</font></a></li>
-                <li><a href="#"> <font color="#F1DFED"> Donate </font></a></li>
               </ul>
             </div>
           </div>
@@ -137,6 +138,18 @@
         <br>
         <h2 class = "header"> <font color="#8A9BAB"> Latest Blog Post </font> </h2>
         <hr width="250px">
+        <script> 
+          $.get('https://familiarworks.wordpress.com/feed/', function (data) {
+            $(data).find("item").each(function () { // or "item" or whatever suits your feed
+             var el = $(this);
+
+            console.log("------------------------");
+            console.log("title      : " + el.find("title").text());
+            console.log("author     : " + el.find("author").text());
+            console.log("description: " + el.find("description").text());
+            });
+          });
+        </script>
         <script src="https://rss.bloople.net/?url=https%3A%2F%2Ffamiliarworks.wordpress.com%2Ffeed%2F&limit=2&showtitle=false&type=js"></script>
       </div>
       <div class="col-md-4">
